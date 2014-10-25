@@ -1,2 +1,2 @@
-startbootstrap-shop-homepage
-============================
+Start Bootstrap - Shop Homepage
+=========
