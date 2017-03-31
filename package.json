@@ -1,0 +1,15 @@
+{
+    "name": "startbootstrap-shop-homepage",
+    "title": "Shop Homepage",
+    "version": "4.0.0-alpha",
+    "homepage": "http://startbootstrap.com/template-overviews/shop-homepage",
+    "author": "Start Bootstrap",
+    "license": {
+        "type": "MIT",
+        "url": "https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/BlackrockDigital/startbootstrap-shop-homepage.git"
+    }
+}
