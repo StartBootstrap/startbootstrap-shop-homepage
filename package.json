@@ -1,15 +1,37 @@
 {
-    "name": "startbootstrap-shop-homepage",
     "title": "Shop Homepage",
+    "name": "startbootstrap-shop-homepage",
     "version": "4.0.0-alpha",
+    "description": "A shop homepage HTML template built with Bootstrap",
+    "keywords": [
+        "css",
+        "sass",
+        "html",
+        "responsive",
+        "theme",
+        "template"
+    ],
     "homepage": "http://startbootstrap.com/template-overviews/shop-homepage",
-    "author": "Start Bootstrap",
-    "license": {
-        "type": "MIT",
-        "url": "https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE"
+    "bugs": {
+        "url": "https://github.com/BlackrockDigital/startbootstrap-shop-homepage/issues",
+        "email": "feedback@startbootstrap.com"
     },
+    "license": "MIT",
+    "author": "Start Bootstrap",
+    "contributors": [
+        "David Miller (http://davidmiller.io/)"
+    ],
     "repository": {
         "type": "git",
         "url": "https://github.com/BlackrockDigital/startbootstrap-shop-homepage.git"
+    },
+    "dependencies": {
+        "bootstrap": "^4.0.0-alpha.6",
+        "jquery": "^3.2.1",
+        "tether": "^1.4.0"
+    },
+    "devDependencies": {
+        "browser-sync": "^2.18.8",
+        "gulp": "^3.9.1"
     }
 }
