@@ -1,7 +1,7 @@
 {
   "title": "Shop Homepage",
   "name": "startbootstrap-shop-homepage",
-  "version": "4.0.0-beta",
+  "version": "4.0.0-beta.2",
   "description": "A shop homepage HTML template built with Bootstrap",
   "keywords": [
     "css",
@@ -26,9 +26,8 @@
     "url": "https://github.com/BlackrockDigital/startbootstrap-shop-homepage.git"
   },
   "dependencies": {
-    "bootstrap": "^4.0.0-beta",
-    "jquery": "^3.2.1",
-    "popper.js": "^1.11.1"
+    "bootstrap": "^4.0.0-beta.2",
+    "jquery": "^3.2.1"
   },
   "devDependencies": {
     "browser-sync": "2.18.13",
