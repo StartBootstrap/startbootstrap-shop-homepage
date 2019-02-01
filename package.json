@@ -1,7 +1,7 @@
 {
     "title": "Shop Homepage",
     "name": "startbootstrap-shop-homepage",
-    "version": "4.1.1",
+    "version": "4.1.2",
     "description": "A shop homepage HTML template built with Bootstrap",
     "keywords": [
         "css",
@@ -26,11 +26,11 @@
         "url": "https://github.com/BlackrockDigital/startbootstrap-shop-homepage.git"
     },
     "dependencies": {
-        "bootstrap": "4.1.1",
+        "bootstrap": "4.2.1",
         "jquery": "3.3.1"
     },
     "devDependencies": {
-        "browser-sync": "2.24.5",
-        "gulp": "^3.9.1"
+        "browser-sync": "2.26.3",
+        "gulp": "4.0.0"
     }
 }
