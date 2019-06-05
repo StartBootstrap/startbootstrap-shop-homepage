@@ -1,6 +1,6 @@
 {
-    "title": "Shop Homepage",
-    "name": "startbootstrap-shop-homepage",
+    "title": "Arape Multitienda",
+    "name": "ArapeMultitienda",
     "version": "4.2.0",
     "scripts": {
         "start": "gulp watch"
