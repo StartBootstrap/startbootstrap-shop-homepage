@@ -3,7 +3,7 @@
     "name": "arape-multitienda",
     "version": "4.2.0",
     "scripts": {
-        "start": "gulp watch"
+        "start": "index.html"
     },
     "description": "A shop homepage HTML template built with Bootstrap",
     "keywords": [
