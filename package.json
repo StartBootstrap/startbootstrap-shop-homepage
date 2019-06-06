@@ -1,6 +1,6 @@
 {
     "title": "Arape Multitienda",
-    "name": "ArapeMultitienda",
+    "name": "arape-multitienda",
     "version": "4.2.0",
     "scripts": {
         "start": "gulp watch"
