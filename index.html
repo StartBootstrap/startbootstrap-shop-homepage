@@ -21,7 +21,7 @@
 <body>
 
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
     <div class="container">
       <a target="_blank" href="https://www.udemy.com/">
       <img width= "150" class="ctin-logo" alt="CTIN" src="logo.png">
@@ -47,8 +47,7 @@
             <a class="nav-link" href="#">Notificaciones</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Perfil</a>
-            <span class="avatar bg-dark text-white rounded-circle avatar-lg">AE</span>
+          <button class="avatar bg-info text-white rounded-circle btn avatar-lg" type="button">AE</button>
           </li>
         </ul>
       </div>
@@ -57,34 +56,24 @@
   <hr />
   <!-- Page Content -->
   <div class="container">
-
-    <div class="row">
-
-      <div class="col-lg-3">
-
-      </div>
-      <!-- /.col-lg-3 -->
-
-      <div class="col-lg-9">
-
         <!--Para modificar el cuadro carousel, el que se despliega a la derecha, hay que modificar la lista de bajo agregando una linea nueva igual a las anterios en esta lista y la otra -->
-
-        <div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel">
+  <div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel">
           <ol class="carousel-indicators">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
             <!-- AQUI! -->
           </ol>
+
           <div class="carousel-inner" role="listbox">
             <div class="carousel-item active">
-              <img width="900" class="d-block img-fluid" src="CTINPRES.png" alt="First slide">
+              <img width="900" class="d-block w-100" src="CTINPRES.png" alt="First slide">
             </div>
             <div class="carousel-item">
-              <img width="900" class="d-block img-fluid" src="https://cdn.vox-cdn.com/thumbor/fbrTLtxuP2D29o8VJUaE-u3NKfU=/0x0:792x613/1200x800/filters:focal(300x237:426x363)/cdn.vox-cdn.com/uploads/chorus_image/image/59850273/Docker_logo_011.0.png" alt="Second slide">
+              <img width="900" class="d-block w-100" src="https://cdn.vox-cdn.com/thumbor/fbrTLtxuP2D29o8VJUaE-u3NKfU=/0x0:792x613/1200x800/filters:focal(300x237:426x363)/cdn.vox-cdn.com/uploads/chorus_image/image/59850273/Docker_logo_011.0.png" alt="Second slide">
             </div>
             <div class="carousel-item">
-              <img width="900" class="d-block img-fluid" src="https://cdn2.hubspot.net/hubfs/4305976/images/openshift-legacy/logos/openshift/Logotype_RH_OpenShiftContainerLab_wLogo_RGB_Gray.png" alt="Third slide">
+              <img width="900" class="d-block w-100" src="https://cdn2.hubspot.net/hubfs/4305976/images/openshift-legacy/logos/openshift/Logotype_RH_OpenShiftContainerLab_wLogo_RGB_Gray.png" alt="Third slide">
                <!-- Y AQUI! -->
 
             </div>
@@ -97,9 +86,9 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
           </a>
-        </div>
+  </div>
 
-        <div class="row">
+  <div class="row">
 
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="card h-100">
@@ -196,8 +185,7 @@
               </div>
             </div>
           </div>
-
-        </div>
+  </div>
         <!-- /.row -->
 
       </div>
