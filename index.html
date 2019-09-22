@@ -21,13 +21,18 @@
                     var str1 = "Hello";
                     var str2 = "World";
                     var res = "Hello World";
+                    var scrt_var = "https://en.wikipedia.org/wiki/Virtual_machine";
+                    var strLink = "2.html&Key=" + scrt_var;
 
 window.onload = myFunction()
 
                 function myFunction() {
 
 
-document.getElementById("test").innerHTML = res; }
+//document.getElementById("test").innerHTML = res;
+document.getElementById("test").setAttribute("href",strLink);
+
+}
 
 
    </script>
