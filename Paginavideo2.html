@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>La tienda - CTIN</title>
+
+  <!-- Bootstrap core CSS 	-->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template 	-->
+  <link href="css/shop-homepage.css" rel="stylesheet">
+
+
+
+  <!-- Bootstrap CSS
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="bootstrap-chosen.css">
+  <link rel="stylesheet" href="styles.css">
+    -->
+
+</head>
+
+<style type="text/css">
+
+	.video{
+	width: 100%;
+
+	}
+
+	.c-video{
+	width: 100%;
+	max-width: 1300px;
+	position: relative;
+	overflow: hidden;
+	}
+
+	.c-video:hover .controls {
+	transform: translateY(0);
+	}
+
+	.controls{
+	display: flex;
+	position: absolute;
+	bottom:0;
+	width: 100%;
+	flex-wrap: wrap;
+	background: rgba(0,0,0,0.7);
+	transform: translateY(100%) translateY(-8px);
+	transition: all 0.2s;
+	}
+
+	.buttons{
+	padding: 10px;
+	}
+
+
+	.buttons button {
+	background: none;
+	border: 0;
+	outline: 0;
+	cursor: pointer;
+	}
+
+
+	.buttons button:before {
+
+	content: '\f144';
+	font-family:'Font Awesome 5 Free';
+	width: 30px;
+	height: 30px;
+	display inline-block;
+	font-size:28px;
+	color: #fff;
+	-webkit-font-smoothing: antialiased;
+
+	}
+
+.buttons button.play:before {
+	content: "\f144";
+	}
+
+.buttons button.pause:before {
+	content: "\f28b";
+	}
+
+	.orange-bar {
+	height: 10px;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background:#000;
+	}
+
+	.orange-juice {
+	height: 10px;
+	background-color: Aquamarine;
+	}
+
+	.vidcont{
+	width: 75%;
+	max-width: 1200px;
+	position: fixed;
+	left:8px;
+	overflow: hidden;
+	}
+
+	.vidcontmenu{
+	width: 75%;
+	max-width: 1200px;
+	position: relative;
+	left:8px;
+	overflow: hidden;
+	}
+
+	.vidcont:hover .controls {
+	transform: translateY(-10%);
+	}
+
+	.topleft {
+  position: fixed;
+  top: 735px;
+  left: 16px;
+  font-size: 18px;
+  text-align:center;
+  width: 75%;
+}
+
+
+	.sidebar-column{
+	width: 25%;
+	position: sticky;
+  	left: 1200px;
+	}
+
+
+.containercomplete {
+   display: flex;
+}
+
+
+
+.curriculum-item {
+    margin-right: 4px;
+    padding: 0;
+    color: #a1a7b3;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.43em;
+    line-height: inherit;
+    border: 0;
+}
+
+.lilborder{
+	border: 3px solid #73AD21;
+}
+
+
+
+ </style>
+
+
+<body>
+
+<div class="containercomplete">
+ 	<div class="vidcont">
+		  <video class="video" src="video.mp4" >  </video>
+ 		 <div class="controls">
+		 			 	<div class="orange-bar">
+		 			 		<div class="orange-juice"></div>
+		 			 	</div>
+		 			 	<div class="buttons">
+		 			 			<button id="play-pause"></button>
+						</div>
+					  </div>
+	 </div>
+<div class="containercomplete ">
+		<div class="vidcont lilborder">
+		</div>
+	</div>
+
+	<div class="sidebar-column">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-2">
+				</div>
+				<div class="col-lg-10">
+					<h2>Contenido del curso<h2>
+				<div class="sidebar-sticky">
+		            <ul class="nav flex-column">
+
+		              <li class="nav-item">
+		                <a class="nav-link" href="https://www.youtube.com/watch?v=yY6XnbWnK4o">
+		                  <h3>Introduccion<h3>
+
+		                </a>
+		              </li>
+					  <li class="nav-item">
+		                <a class="nav-link" href="https://www.youtube.com/watch?v=yY6XnbWnK4o">
+		                  <h5>1.Instalando la herramienta</h5>
+		                   <a class="flex-sm-fill text-sm-center nav-link" href="#">
+		                   <h6>1.1 Instalacion en Windows</h6>
+		                   <div class="curriculum-item">
+		                   <span>1min</span>
+		                   </div>
+		               		</a>
+		               		 <a class="flex-sm-fill text-sm-center nav-link" href="#">
+		                   <h6>1.2 Instalacion en MAC</h6>
+		               		</a>
+		               		 <a class="flex-sm-fill text-sm-center nav-link" href="#">
+		                   <h6>1.3 Instalacion en Linux</h6>
+		               		</a>
+		                </a>
+		              </li>
+					  <li class="nav-item">
+		                <a class="nav-link" href="https://www.youtube.com/watch?v=yY6XnbWnK4o">
+		                  <h5>2.Explorando la herramienta</h5>
+		                </a>
+		              </li>
+		              <li class="nav-item">
+		                <a class="nav-link" href="https://www.youtube.com/watch?v=yY6XnbWnK4o">
+		                  <h5>3.Usos dentro de la terminal</h5>
+		                </a>
+		              </li>
+		              <li class="nav-item">
+		                <a class="nav-link" href="https://www.youtube.com/watch?v=yY6XnbWnK4o">
+		                  <h5>4.Docker Hub</h5>
+		                </a>
+		              </li>
+		              <li class="nav-item">
+		                <a class="nav-link" href="https://www.youtube.com/watch?v=yY6XnbWnK4o">
+		                  <h5>5.Dockerfiles</h5>
+		                </a>
+		              </li>
+		              <li class="nav-item">
+		                <a class="nav-link" href="https://www.youtube.com/watch?v=yY6XnbWnK4o">
+		                  <h5>6.Volumen persistente</h5>
+		                </a>
+					  </li>
+					  <li class="nav-item">
+		                <a class="nav-link" href="https://www.youtube.com/watch?v=yY6XnbWnK4o">
+		                  <h5>7.Test text</h5>
+		                </a>
+					  </li>
+					  <li class="nav-item">
+		                <a class="nav-link" href="https://www.youtube.com/watch?v=yY6XnbWnK4o">
+		                  <h5>7.Test text</h5>
+		                </a>
+					  </li>
+					  <li class="nav-item">
+		                <a class="nav-link" href="https://www.youtube.com/watch?v=yY6XnbWnK4o">
+		                  <h5>7.Test text</h5>
+		                </a>
+					  </li>
+					  <li class="nav-item">
+		                <a class="nav-link" href="https://www.youtube.com/watch?v=yY6XnbWnK4o">
+		                  <h5>7.Test text</h5>
+		                </a>
+		              </li>
+		               <li class="nav-item">
+		                <a class="nav-link" href="https://www.youtube.com/watch?v=yY6XnbWnK4o">
+		                  <h5>7.Test text</h5>
+		                </a>
+					  </li>
+					  <li class="nav-item">
+		                <a class="nav-link" href="https://www.youtube.com/watch?v=yY6XnbWnK4o">
+		                  <h5>7.Test text</h5>
+		                </a>
+					  </li>
+					  <li class="nav-item">
+		                <a class="nav-link" href="https://www.youtube.com/watch?v=yY6XnbWnK4o">
+		                  <h5>7.Test text</h5>
+		                </a>
+					  </li>
+					  <li class="nav-item">
+		                <a class="nav-link" href="https://www.youtube.com/watch?v=yY6XnbWnK4o">
+		                  <h5>7.Test text</h5>
+		                </a>
+		              </li>
+		            </ul>
+          </div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="topleft">
+		<div>
+		<br>
+		</div>
+	 <div class="row">
+		 <div class="col-lg-1 ">
+			<h5>LP<h5>
+		  </div>
+		 <div class="col-lg-1 ">
+			<h5>Overview<h5>
+		  </div>
+		  <div class="col-lg-1 ">
+			<h5>Q&A<h5>
+		  </div>
+		  <div class="col-lg-1 ">
+			<h5>Bookmars<h5>
+		 </div>
+		 <div class="col-lg-1  ">
+			<h5>Announcements<h5>
+		 </div>
+		 <div class="col-lg-7">
+		 </div>
+	 </div>
+</div>
+
+
+<script type="text/javascript" src="script.js"></script>
+
+</body>
+
+</html>
