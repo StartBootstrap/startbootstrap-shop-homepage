@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+
+  <!-- Prueba de src -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link href="css/shop-homepage.css" rel="stylesheet">
+<!--
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <!-- Prueba de src 	-->
+
+
+
+  <title>La tienda - CTIN</title>
+
+  <!-- Bootstrap core CSS
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template
+  <link href="css/shop-homepage.css" rel="stylesheet">
+
+  <!-- Bootstrap core JSe
+ 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+ 	-->
+
+
+
+  <!-- Bootstrap CSS
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="bootstrap-chosen.css">
+  <link rel="stylesheet" href="styles.css">
+    -->
+
+<style type="text/css">
+
+	.video{
+	width: 100%;
+	}
+
+	.buttons{
+	padding: 10px;
+	}
+
+	.buttons button {
+	background: none;
+	border: 0;
+	outline: 0;
+	cursor: pointer;
+	}
+
+	.buttons button:before {
+	content: '\f144';
+	font-family:'Font Awesome 5 Free';
+	width: 30px;
+	height: 30px;
+	display inline-block;
+	font-size:28px;
+	color: #fff;
+	-webkit-font-smoothing: antialiased;
+	}
+
+	.buttons button.play:before {
+	content: "\f144";
+	}
+
+	.buttons button.pause:before {
+	content: "\f28b";
+	}
+
+	.orange-bar {
+	height: 10px;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background:#000;
+	}
+
+	.orange-juice {
+	height: 10px;
+	background-color: Aquamarine;
+	}
+
+	.topleft {
+	  position: absolute;
+	  left: 16px;
+	  font-size: 18px;
+	  text-align:center;
+	}
+
+	.sidebar-column{
+	width: 25%;
+	position: sticky;
+  	left: 1200px;
+	}
+
+   .containercomplete {
+   display: flex;
+   }
+
+	.curriculum-item {
+    margin-right: 4px;
+    padding: 0;
+    color: #a1a7b3;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.43em;
+    line-height: inherit;
+    border: 0;
+	}
+
+	.lilborder{
+	border: 3px solid black;
+	}
+
+	.fs{
+	font-size: 20px;
+	}
+
+	.ta{
+	text-align:center
+	}
+
+	.controls{
+	display: flex;
+	position: absolute;
+	bottom:0;
+	width: 100%;
+	flex-wrap: wrap;
+	background: rgba(0,0,0,0.7);
+	transform: translateY(100%) translateY(-8px);
+	transition: all 0.2s;
+	}
+
+	.vidcont{
+		overflow: hidden;
+	}
+
+	.vidcont:hover .controls {
+		transform: translateY(-10%);
+	}
+
+
+
+
+</style>
+
+</head>
+
+
+
+
+<body>
+
+<div class="container-fluid">
+ 	<div class="row">
+ 		<div class="col-lg-10">
+		  	<div class="vidcont">
+			  	<video class="video" src="video.mp4" >  </video>
+
+		  		<div style="position: relative">
+					<div class="controls">
+						<div class="orange-bar">
+							<div class="orange-juice"></div>
+						</div>
+						<div class="buttons">
+							<button id="play-pause"></button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+ 			<div class="row">
+		 				<div class="col-lg-8">
+
+						  	<ul class="nav nav-tabs nav-justified fs">
+
+						  	  <li class="nav-item "><a class="nav-link active" data-toggle="tab" href="#menu1">LP</a></li>
+						  	  <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#menu2">Overview</a></li>
+						  	  <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#menu3">Q&A</a></li>
+						  	  <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#menu4">Bookmarks</a></li>
+						  	  <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#menu5">Announcements</a></li>
+						  	   <li class="nav-item">  </li>
+
+						  	</ul>
+						</div>
+											<div >		<hr>					<br>							</div>
+
+						<div class="container">
+						  	<div class="tab-content">
+
+							  	<div id="menu1" class="tab-pane fade in active">
+							  	    <h3>LP</h3>
+							  	    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+							  	</div>
+							  	<div id="menu2" class="tab-pane fade ta">
+							  	    <h3>Overview</h3>
+							  	    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+
+								  	    <div class="card" style="width: 100%;">
+										  <ul class="list-group list-group-flush">
+										    <li class="list-group-item"></li>
+										    <div class="row">
+	  											<div class="col-sm-6">
+	  												<br>
+	  												<br>
+												    <h3>Informacion del curso</h3>
+												</div>
+												<div class="col-sm-6">
+													<div>Skill level: All Levels</div>
+													<div>Students: 12686</div>
+													<div>Languages: English</div>
+													<div>Captions: Yes</div>
+													<div>Lectures: 13</div>
+													<div>Video: 2.5 hours</div>
+												</div>
+											</div>
+
+
+
+
+
+										    <li class="list-group-item" ></li>
+
+											<div class="row" >
+											  <div class="col-sm-6">
+											    <div class="card" style="height:100px">
+											      <div class="card-body">
+											        <h5 class="card-title">Caracteristicas</h5>
+											        <p class="card-text"></p>
+											      </div>
+											    </div>
+											  </div>
+											  <div class="col-sm-6">
+											    <div class="card" style="height:100px">
+											      <div class="card-body">
+											        <p class="card-text">
+											        	Available on
+											        	<a href="">iOS</a> and
+														<a href="">Android</a>
+														<div>Certificate of completion</div>
+													</p>
+											      </div>
+											    </div>
+											  </div>
+											</div>
+
+
+
+										    <li class="list-group-item"></li>
+										     <div class="row">
+	  											<div class="col-sm-3">
+	  												<br>
+	  												<br>
+												    <h3>Descripcion</h3>
+	  											</div>
+	  											<div class="col-sm-9">
+	  												<br>
+	  												 <strong>Porque aprender a utilizar Docker</strong>
+	  												 <br>
+												    <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+												     Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+
+												     <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+												     <strong>Porque aprender a utilizar Docker</strong>
+												     <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+	  											</div>
+											</div>
+										  </ul>
+										</div>
+							  	</div>
+							  	<div id="menu3" class="tab-pane fade">
+								  	    <h3>Q&A</h3>
+								  	    <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+
+								  	    <div class="form-group">
+									    	<input type="text" class="form-control" placeholder="Default input">
+										</div>
+
+											<div class="media media-comment">
+									   			<img src="https://ui-avatars.com/api/?name=Andres+Belendez&&background=0D8ABC&color=fff&&bold=true" alt="IconoUsername" class="mr-3">
+									    		<div class="media-body">
+									    	   		<div class="media-comment-bubble left-top">
+										    	        <h6 class="mt-0">Andres Belendez</h6>
+										    	        <p class="text-sm lh-160">Cras sit amet nibh libero, in gravida nulla.
+										    	        Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p>
+									    	        <div class="icon-actions">
+									    	            <a href="#" class="love active">
+									    	                <i class="fas fa-heart"></i>
+									    	                <span class="text-muted">10 likes</span>
+									    	            </a>
+									    	            <a href="#">
+									    	                <i class="fas fa-comment"></i>
+									    	                <span class="text-muted">1 reply</span>
+									    	            </a>
+									    	    	</div>
+									    			</div>
+									    		</div>
+									    	</div>
+
+											<div class="media media-comment">
+									   			<img src="https://ui-avatars.com/api/?name=JamesT+Kirk&&background=af7ac5&color=fff&&bold=true" alt="IconoUsername" class="mr-3">
+									    		<div class="media-body">
+										    	    <div class="media-comment-bubble left-top">
+										    	        <h6 class="mt-0">JamesT. Kirk</h6>
+										    	        <p class="text-sm lh-160">Cras sit amet nibh libero, in gravida nulla.
+										    	        Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p>
+										    	        <div class="icon-actions">
+										    	            <a href="#" class="love active">
+										    	                <i class="fas fa-heart"></i>
+										    	                <span class="text-muted">3 likes</span>
+										    	            </a>
+										    	            <a href="#">
+										    	                <i class="fas fa-comment"></i>
+										    	                <span class="text-muted">12 reply</span>
+										    	            </a>
+										    	    	</div>
+										    		</div>
+									    		</div>
+									    	</div>
+
+									    	<div class="media media-comment">
+									   			<img src="https://ui-avatars.com/api/?name=Spock&&background=0fb370&color=fff&&bold=true" alt="IconoUsername" class="mr-3">
+									    		<div class="media-body">
+										    	    <div class="media-comment-bubble left-top">
+										    	        <h6 class="mt-0">Spock</h6>
+										    	        <p class="text-sm lh-160">Cras sit amet nibh libero, in gravida nulla.
+										    	        Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p>
+										    	        <div class="icon-actions">
+										    	            <a href="#" class="love active">
+										    	                <i class="fas fa-heart"></i>
+										    	                <span class="text-muted">100 likes</span>
+										    	            </a>
+										    	            <a href="#">
+										    	                <i class="fas fa-comment"></i>
+										    	                <span class="text-muted">0 reply</span>
+										    	            </a>
+										    	    	</div>
+										    		</div>
+									    		</div>
+									    	</div>
+								</div>
+						  	  	<div id="menu4" class="tab-pane fade ta">
+							  	    <div class="media">
+										  <div class="media-body">
+										    <h3 class="mt-0">Bookmarks</h3>
+										    <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+										    <p class="mb-0">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+										  </div>
+									</div>
+						  	  	</div>
+
+						  	  	<div id="menu5" class="tab-pane fade">
+									<div class="container">
+										<img width="48" height="48" src="https://ui-avatars.com/api/?name=Spock&&background=0fb370&color=fff&&bold=true" alt="IconoUsername" class="mr-3" data-purpose="user-avatar">
+
+										<span><a href="">Spock</a> posted an announcement</span>  <time> · a month ago</time> <hr>
+
+										<div class="card">
+											 <span>  <a aria-label="Report abuse" href="">
+											<span class="udi udi-flag">
+											</span>
+											</a>
+											</span>
+										</div>
+										<div class="card">
+											<div class="card-body">
+											<h2>Nuevo Anuncio por parte de su maestro</h2>
+											<p>Dear students,<br><br>We are thrilled to let you know that we have launched Yuble.<br><br>A social network for gamers, game developers, teachers, instructors, content creators and everyone else into games or not interested in this but more into just chatting.<br><br>Yuble is a social network but on top of that are we launching our courses within this social network.<br><br>All our Roblox course members will get free access to our Roblox course within the platform when it launches.<br><br>All our Unity members will get free access to our soon to launch Unity course which offers 250 lessons and 40 hours of content and will be released when finished. <br><br>This course is made in collaboration with Unity and also will teach you everything you need to know to get started on earning the Unity Programmer Certificate.<br><br>This offer stands to all Unity members till the first of November and only gets triggered when you do register to our social network using the following link.<br><a href="https://yuble.mn.co/" target="_blank" rel="noopener noreferrer">https://yuble.mn.co</a><br><br>Roblox members can request access to our Roblox course by simply sending a message to one of the hosts on the platform.<br><br>If you haven't purchased our Roblox course then make use of the link below which allows you to purchase to course for only $4.99 USD so definitely worth the purchase which grants you direct access to the Udemy and Yuble Platform Roblox course.<br>https://yuble.mn.co/plans/12972?bundle_token=aa718cd9fdb6ec664a071df7094eb5cc&amp;utm_source=manual<br><br>We hope to see you soon on the platform!<br>
+											<br>Happy&nbsp;learning!</p>
+											</div>
+										</div>
+										<br>
+										<div class="form-group">
+											<div class="row">
+												<div class="col-sm-1">
+										   		</div>
+												<div class="col-sm-1">
+													<div class="media media-comment">
+											   			<img width="45" height="45" src="https://ui-avatars.com/api/?name=Andres+Belendez&&background=0D8ABC&color=fff&&bold=true" alt="IconoUsername" class="rounded-circle">
+											   		</div>
+											   	</div>
+										   		<div class="col-sm-9">
+													<input type="text" class="form-control" placeholder="Default input">
+												</div>
+											</div>
+										</div>
+									</div>
+						  	  	</div>
+
+		  					</div>
+		  				</div>
+
+
+			</div>
+		</div>
+
+
+		<div class="col-lg-2">
+			<h2>Contenido del curso</h2>
+			<div class="sidebar-sticky">
+	           <ul class="nav flex-column ta">
+             <li class="nav-item">
+               <a class="nav-link" href="https://www.youtube.com/watch?v=yY6XnbWnK4o">
+                 <h3>Introduccion</h3>
+               </a>
+             </li>
+			  <li class="nav-item">
+	               <a class="nav-link" href="https://www.youtube.com/watch?v=yY6XnbWnK4o">
+	                 <h5>1.Instalando la herramienta</h5></a>
+	                  <a class="flex-sm-fill text-sm-center nav-link" href="#">
+	                  <h6>1.1 Instalacion en Windows</h6>
+		                  <div class="curriculum-item">
+			                   <span>1min</span>
+			                   </div>
+			               		</a>
+			               		 <a class="flex-sm-fill text-sm-center nav-link" href="#">
+			                   <h6>1.2 Instalacion en MAC</h6>
+			                    <div class="curriculum-item">
+			                   <span>1min</span>
+			                   </div>
+			               		</a>
+			               		 <a class="flex-sm-fill text-sm-center nav-link" href="#">
+			                   <h6>1.3 Instalacion en Linux</h6>
+			                    <div class="curriculum-item">
+			                   <span>1min</span>
+			                   </div>
+			               		</a>
+
+			              </li>
+						  <li class="nav-item">
+			                <a class="nav-link" href="https://www.youtube.com/watch?v=yY6XnbWnK4o">
+			                  <h5>2.Explorando la herramienta</h5>
+			                  </a>
+			                   <a class="flex-sm-fill text-sm-center nav-link" href="#">
+	                 			<h6>2.1 Introduccion a docker</h6>
+			                   <div class="curriculum-item">
+			                   <span>1min</span>
+			                   </div>
+			                   </a>
+			                   <a class="flex-sm-fill text-sm-center nav-link" href="#">
+	                 			<h6>2.2 Verificacion de archivos</h6>
+			                   <div class="curriculum-item">
+			                   <span>1min</span>
+			                   </div>
+			                </a>
+			              </li>
+			              <li class="nav-item">
+			                <a class="nav-link" href="https://www.youtube.com/watch?v=yY6XnbWnK4o">
+			                  <h5>3.Usos dentro de la terminal</h5>
+			                   <div class="curriculum-item">
+			                   <span>25min</span>
+			                   </div>
+			                </a>
+			              </li>
+			              <li class="nav-item">
+			                <a class="nav-link" href="https://www.youtube.com/watch?v=yY6XnbWnK4o">
+			                  <h5>4.Docker Hub</h5>
+			                </a>
+			              </li>
+			              <li class="nav-item">
+			                <a class="nav-link" href="https://www.youtube.com/watch?v=yY6XnbWnK4o">
+			                  <h5>5.Dockerfiles</h5>
+			                </a>
+			              </li>
+			              <li class="nav-item">
+			                <a class="nav-link" href="https://www.youtube.com/watch?v=yY6XnbWnK4o">
+			                  <h5>6.Volumen persistente</h5>
+			                </a>
+						  </li>
+						  <li class="nav-item">
+			                <a class="nav-link" href="https://www.youtube.com/watch?v=yY6XnbWnK4o">
+			                  <h5>7.Test text</h5>
+			                </a>
+						  </li>
+						  <li class="nav-item">
+			                <a class="nav-link" href="https://www.youtube.com/watch?v=yY6XnbWnK4o">
+			                  <h5>7.Test text</h5>
+			                </a>
+						  </li>
+						  <li class="nav-item">
+			                <a class="nav-link" href="https://www.youtube.com/watch?v=yY6XnbWnK4o">
+			                  <h5>7.Test text</h5>
+			                </a>
+			              </li>
+
+			               <li class="nav-item">
+			                <a class="nav-link" href="https://www.youtube.com/watch?v=yY6XnbWnK4o">
+			                  <h5>7.Test text</h5>
+			                </a>
+						  </li>
+						  <li class="nav-item">
+			                <a class="nav-link" href="https://www.youtube.com/watch?v=yY6XnbWnK4o">
+			                  <h5>7.Test text</h5>
+			                </a>
+						  </li>
+						  <li class="nav-item">
+			                <a class="nav-link" href="https://www.youtube.com/watch?v=yY6XnbWnK4o">
+			                  <h5>7.Test text</h5>
+			                </a>
+						  </li>
+						  <li class="nav-item">
+			                <a class="nav-link" href="https://www.youtube.com/watch?v=yY6XnbWnK4o">
+			                  <h5>7.Test text</h5>
+			                </a>
+			              </li>
+
+			            </ul>
+	          </div>
+			</div>
+			</div>
+</div>
+
+<div class="container">
+
+ </div>
+
+
+
+
+
+
+<script type="text/javascript" src="script.js"></script>
+
+</body>
+
+
+
+</html>
+
