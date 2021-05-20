@@ -13,132 +13,215 @@ html(lang='en')
         // Favicon
         link(rel='icon', type='image/x-icon', href='assets/favicon.ico')
 
+        // Bootstrap icons
+        link(href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css', rel='stylesheet')
+
         // Core theme CSS (includes Bootstrap)
         link(href='css/styles.css', rel='stylesheet')
 
     body
 
         // Navigation
-        nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
-            .container
+        nav.navbar.navbar-expand-lg.navbar-light.bg-light
+            .container.px-4.px-lg-5
                 a.navbar-brand(href='#!') Start Bootstrap
-                button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
+                button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
                     span.navbar-toggler-icon
-                #navbarResponsive.collapse.navbar-collapse
-                    ul.navbar-nav.ml-auto
-                        li.nav-item.active
-                            a.nav-link(href='#!')
-                                | Home
-                                span.sr-only (current)
+                #navbarSupportedContent.collapse.navbar-collapse
+                    ul.navbar-nav.me-auto.mb-2.mb-lg-0.ms-lg-4
+                        li.nav-item
+                            a.nav-link.active(aria-current='page' href='#!') Home
                         li.nav-item
                             a.nav-link(href='#!') About
-                        li.nav-item
-                            a.nav-link(href='#!') Services
-                        li.nav-item
-                            a.nav-link(href='#!') Contact
+                        li.nav-item.dropdown
+                            a#navbarDropdown.nav-link.dropdown-toggle(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false')
+                                | Shop
+                            ul.dropdown-menu(aria-labelledby='navbarDropdown')
+                                li
+                                    a.dropdown-item(href='#!') All Products
+                                li
+                                    hr.dropdown-divider
+                                li
+                                    a.dropdown-item(href='#!') Popular Items
+                                li
+                                    a.dropdown-item(href='#!') New Arrivals
+                    form.d-flex
+                        button.btn.btn-outline-dark(type='submit')
+                            i.bi-cart-fill.me-1
+                            | Cart
+                            span.badge.bg-dark.text-white.ms-1.rounded-pill 0
 
-        // Page Content
-        .container
-            .row
-                .col-lg-3
-                    h1.my-4 Shop Name
-                    .list-group
-                        a.list-group-item(href='#!') Category 1
-                        a.list-group-item(href='#!') Category 2
-                        a.list-group-item(href='#!') Category 3
+        // Header
+        header.bg-dark.py-5
+            .container.px-4.px-lg-5.my-5
+                .text-center.text-white
+                    h1.display-4.fw-bolder Shop in style
+                    p.lead.fw-normal.text-white-50.mb-0 With this shop hompeage template
 
-                .col-lg-9
-                    #carouselExampleIndicators.carousel.slide.my-4(data-ride='carousel')
-                        ol.carousel-indicators
-                            li.active(data-target='#carouselExampleIndicators', data-slide-to='0')
-                            li(data-target='#carouselExampleIndicators', data-slide-to='1')
-                            li(data-target='#carouselExampleIndicators', data-slide-to='2')
-                        .carousel-inner(role='listbox')
-                            .carousel-item.active
-                                img.d-block.img-fluid(src='https://via.placeholder.com/900x350', alt='First slide')
-                            .carousel-item
-                                img.d-block.img-fluid(src='https://via.placeholder.com/900x350', alt='Second slide')
-                            .carousel-item
-                                img.d-block.img-fluid(src='https://via.placeholder.com/900x350', alt='Third slide')
-                        a.carousel-control-prev(href='#carouselExampleIndicators', role='button', data-slide='prev')
-                            span.carousel-control-prev-icon(aria-hidden='true')
-                            span.sr-only Previous
-                        a.carousel-control-next(href='#carouselExampleIndicators', role='button', data-slide='next')
-                            span.carousel-control-next-icon(aria-hidden='true')
-                            span.sr-only Next
-                    .row
-                        .col-lg-4.col-md-6.mb-4
-                            .card.h-100
-                                a(href='#!')
-                                    img.card-img-top(src='https://via.placeholder.com/700x400', alt='...')
-                                .card-body
-                                    h4.card-title
-                                        a(href='#!') Item One
-                                    h5 $24.99
-                                    p.card-text
-                                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!
-                                .card-footer
-                                    small.text-muted ★ ★ ★ ★ ☆
-                        .col-lg-4.col-md-6.mb-4
-                            .card.h-100
-                                a(href='#!')
-                                    img.card-img-top(src='https://via.placeholder.com/700x400', alt='...')
-                                .card-body
-                                    h4.card-title
-                                        a(href='#!') Item Two
-                                    h5 $24.99
-                                    p.card-text
-                                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.
-                                .card-footer
-                                    small.text-muted ★ ★ ★ ★ ☆
-                        .col-lg-4.col-md-6.mb-4
-                            .card.h-100
-                                a(href='#!')
-                                    img.card-img-top(src='https://via.placeholder.com/700x400', alt='...')
-                                .card-body
-                                    h4.card-title
-                                        a(href='#!') Item Three
-                                    h5 $24.99
-                                    p.card-text
-                                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!
-                                .card-footer
-                                    small.text-muted ★ ★ ★ ★ ☆
-                        .col-lg-4.col-md-6.mb-4
-                            .card.h-100
-                                a(href='#!')
-                                    img.card-img-top(src='https://via.placeholder.com/700x400', alt='...')
-                                .card-body
-                                    h4.card-title
-                                        a(href='#!') Item Four
-                                    h5 $24.99
-                                    p.card-text
-                                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!
-                                .card-footer
-                                    small.text-muted ★ ★ ★ ★ ☆
-                        .col-lg-4.col-md-6.mb-4
-                            .card.h-100
-                                a(href='#!')
-                                    img.card-img-top(src='https://via.placeholder.com/700x400', alt='...')
-                                .card-body
-                                    h4.card-title
-                                        a(href='#!') Item Five
-                                    h5 $24.99
-                                    p.card-text
-                                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.
-                                .card-footer
-                                    small.text-muted ★ ★ ★ ★ ☆
-                        .col-lg-4.col-md-6.mb-4
-                            .card.h-100
-                                a(href='#!')
-                                    img.card-img-top(src='https://via.placeholder.com/700x400', alt='...')
-                                .card-body
-                                    h4.card-title
-                                        a(href='#!') Item Six
-                                    h5 $24.99
-                                    p.card-text
-                                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!
-                                .card-footer
-                                    small.text-muted ★ ★ ★ ★ ☆
+        // Section
+        section.py-5
+            .container.px-4.px-lg-5.mt-5
+                .row.gx-4.gx-lg-5.row-cols-2.row-cols-md-3.row-cols-xl-4.justify-content-center
+                    .col.mb-5
+                        .card.h-100
+                            // Product image
+                            img.card-img-top(src='https://dummyimage.com/450x300/dee2e6/6c757d.jpg', alt='...')
+                            // Product details
+                            .card-body.p-4
+                                .text-center
+                                    // Product name
+                                    h5.fw-bolder Fancy Product
+                                    // Product price
+                                    | $40.00 - $80.00
+                            // Product actions
+                            .card-footer.p-4.pt-0.border-top-0.bg-transparent
+                                .text-center
+                                    a.btn.btn-outline-dark.mt-auto(href='#') View options
+                    .col.mb-5
+                        .card.h-100
+                            // Sale badge
+                            .badge.bg-dark.text-white.position-absolute(style='top: 0.5rem; right: 0.5rem;') Sale
+                            // Product image
+                            img.card-img-top(src='https://dummyimage.com/450x300/dee2e6/6c757d.jpg', alt='...')
+                            // Product details
+                            .card-body.p-4
+                                .text-center
+                                    // Product name
+                                    h5.fw-bolder Special Item
+                                    // Product reviews
+                                    .d-flex.justify-content-center.small.text-warning.mb-2
+                                        .bi-star-fill
+                                        .bi-star-fill
+                                        .bi-star-fill
+                                        .bi-star-fill
+                                        .bi-star-fill
+                                    // Product price
+                                    span.text-muted.text-decoration-line-through $20.00
+                                    | $18.00
+                            // Product actions
+                            .card-footer.p-4.pt-0.border-top-0.bg-transparent
+                                .text-center
+                                    a.btn.btn-outline-dark.mt-auto(href='#') Add to cart
+                    .col.mb-5
+                        .card.h-100
+                            // Sale badge
+                            .badge.bg-dark.text-white.position-absolute(style='top: 0.5rem; right: 0.5rem;') Sale
+                            // Product image
+                            img.card-img-top(src='https://dummyimage.com/450x300/dee2e6/6c757d.jpg', alt='...')
+                            // Product details
+                            .card-body.p-4
+                                .text-center
+                                    // Product name
+                                    h5.fw-bolder Sale Item
+                                    // Product price
+                                    span.text-muted.text-decoration-line-through $50.00
+                                    | $25.00
+                            // Product actions
+                            .card-footer.p-4.pt-0.border-top-0.bg-transparent
+                                .text-center
+                                    a.btn.btn-outline-dark.mt-auto(href='#') Add to cart
+                    .col.mb-5
+                        .card.h-100
+                            // Product image
+                            img.card-img-top(src='https://dummyimage.com/450x300/dee2e6/6c757d.jpg', alt='...')
+                            // Product details
+                            .card-body.p-4
+                                .text-center
+                                    // Product name
+                                    h5.fw-bolder Popular Item
+                                    // Product reviews
+                                    .d-flex.justify-content-center.small.text-warning.mb-2
+                                        .bi-star-fill
+                                        .bi-star-fill
+                                        .bi-star-fill
+                                        .bi-star-fill
+                                        .bi-star-fill
+                                    // Product price
+                                    | $40.00
+                            // Product actions
+                            .card-footer.p-4.pt-0.border-top-0.bg-transparent
+                                .text-center
+                                    a.btn.btn-outline-dark.mt-auto(href='#') Add to cart
+                    .col.mb-5
+                        .card.h-100
+                            // Sale badge
+                            .badge.bg-dark.text-white.position-absolute(style='top: 0.5rem; right: 0.5rem;') Sale
+                            // Product image
+                            img.card-img-top(src='https://dummyimage.com/450x300/dee2e6/6c757d.jpg', alt='...')
+                            // Product details
+                            .card-body.p-4
+                                .text-center
+                                    // Product name
+                                    h5.fw-bolder Sale Item
+                                    // Product price
+                                    span.text-muted.text-decoration-line-through $50.00
+                                    | $25.00
+                            // Product actions
+                            .card-footer.p-4.pt-0.border-top-0.bg-transparent
+                                .text-center
+                                    a.btn.btn-outline-dark.mt-auto(href='#') Add to cart
+                    .col.mb-5
+                        .card.h-100
+                            // Product image
+                            img.card-img-top(src='https://dummyimage.com/450x300/dee2e6/6c757d.jpg', alt='...')
+                            // Product details
+                            .card-body.p-4
+                                .text-center
+                                    // Product name
+                                    h5.fw-bolder Fancy Product
+                                    // Product price
+                                    | $120.00 - $280.00
+                            // Product actions
+                            .card-footer.p-4.pt-0.border-top-0.bg-transparent
+                                .text-center
+                                    a.btn.btn-outline-dark.mt-auto(href='#') View options
+                    .col.mb-5
+                        .card.h-100
+                            // Sale badge
+                            .badge.bg-dark.text-white.position-absolute(style='top: 0.5rem; right: 0.5rem;') Sale
+                            // Product image
+                            img.card-img-top(src='https://dummyimage.com/450x300/dee2e6/6c757d.jpg', alt='...')
+                            // Product details
+                            .card-body.p-4
+                                .text-center
+                                    // Product name
+                                    h5.fw-bolder Special Item
+                                    // Product reviews
+                                    .d-flex.justify-content-center.small.text-warning.mb-2
+                                        .bi-star-fill
+                                        .bi-star-fill
+                                        .bi-star-fill
+                                        .bi-star-fill
+                                        .bi-star-fill
+                                    // Product price
+                                    span.text-muted.text-decoration-line-through $20.00
+                                    | $18.00
+                            // Product actions
+                            .card-footer.p-4.pt-0.border-top-0.bg-transparent
+                                .text-center
+                                    a.btn.btn-outline-dark.mt-auto(href='#') Add to cart
+                    .col.mb-5
+                        .card.h-100
+                            // Product image
+                            img.card-img-top(src='https://dummyimage.com/450x300/dee2e6/6c757d.jpg', alt='...')
+                            // Product details
+                            .card-body.p-4
+                                .text-center
+                                    // Product name
+                                    h5.fw-bolder Popular Item
+                                    // Product reviews
+                                    .d-flex.justify-content-center.small.text-warning.mb-2
+                                        .bi-star-fill
+                                        .bi-star-fill
+                                        .bi-star-fill
+                                        .bi-star-fill
+                                        .bi-star-fill
+                                    // Product price
+                                    | $40.00
+                            // Product actions
+                            .card-footer.p-4.pt-0.border-top-0.bg-transparent
+                                .text-center
+                                    a.btn.btn-outline-dark.mt-auto(href='#') Add to cart
 
         // Footer
         footer.py-5.bg-dark
@@ -146,8 +229,7 @@ html(lang='en')
                 p.m-0.text-center.text-white Copyright &copy; Your Website 2021
 
         // Bootstrap core JS
-        script(src='https://code.jquery.com/jquery-3.5.1.slim.min.js')
-        script(src='https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js')
+        script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js')
 
         // Core theme JS
         script(src='js/scripts.js')
