@@ -1,4 +1,4 @@
-# [Start Bootstrap - Shop Homepage](https://startbootstrap.com/template/shop-homepage/)
+# [3Gos ess Homepage](https://startbootstrap.com/template/shop-homepage/)
 
 [Shop Homepage](https://startbootstrap.com/template/shop-homepage/) is a basic HTML online store homepage template for [Bootstrap](https://getbootstrap.com/) created by [Start Bootstrap](https://startbootstrap.com/).
 
